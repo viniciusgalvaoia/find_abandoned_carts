@@ -23,10 +23,12 @@ O ETL pipeline extrai os dados do arquivo `page-views.json`, cria um arquivo tem
 
 ### Pré-requisitos
 
-Se você deseja executar esse projeto em sua máquina, você deve finalizar os seguintes passos primeiro.
-
-- Instalar Python 3
-- Instalar Apache Beam 2.25.0
+- Python 3
+- apache-beam==2.25.0
+- argparse==1.1
+- logging==0.5.1.2
+- json==2.0.9
+- pandas==1.0.5
 
 ### Instruções
 
@@ -37,6 +39,8 @@ Executar código: `python find_abandoned_carts.py --input input/page-views.json 
 - **input**
   - **page-views.json**
     - dados de navegação dos clientes nas páginas do vendas
+  - **page-views_wrk.json**
+    - arquivo temporário
 - **output**
   - **abandoned-carts.json**
     - dados dos carrinhos abandonados
